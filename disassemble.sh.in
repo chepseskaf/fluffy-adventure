@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+objdump -d @CMAKE_CURRENT_BINARY_DIR@/goto > @CMAKE_CURRENT_BINARY_DIR@/goto.@CPP_VERSION@.disassemblee
+objdump -d @CMAKE_CURRENT_BINARY_DIR@/while > @CMAKE_CURRENT_BINARY_DIR@/while.@CPP_VERSION@.disassemblee
+
+diff @CMAKE_CURRENT_BINARY_DIR@/goto.@CPP_VERSION@.disassemblee @CMAKE_CURRENT_BINARY_DIR@/while.@CPP_VERSION@.disassemblee
